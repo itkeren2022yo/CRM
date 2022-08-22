@@ -40,5 +40,7 @@ Route::get('/token', function () {
 	return csrf_token(); 
 });
 
-Route::post('/department', [DepartmentController::class, 'store']);
-
+Route::post('/department/insert', [DepartmentController::class, 'store']);
+Route::get('/department/show', [DepartmentController::class, 'show']);
+Route::post('/department/delete/{id}', [DepartmentController::class, 'destroy']);
+Route::post('/department/update', [DepartmentController::class, 'update']);
