@@ -84,6 +84,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('tableClientAsesment') }}">
+                      <i class="ni ni-bullet-list-67 text-default"></i>
+                      <span class="nav-link-text">Client Assesment</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #f4645f;"></i>
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
