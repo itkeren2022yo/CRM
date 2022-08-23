@@ -19297,12 +19297,13 @@ a.btn-icon-only
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before
 {
-    border-color: #5e72e4;
+    border-color: #c00000;
+    background-color: #c00000 !important;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after
 {
-    background-image: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\' viewBox=\'0 0 8 8\'><path fill=\'#fff\' d=\'M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z\'/></svg>');
+    background-image: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'8\' height=\'8\' viewBox=\'0 0 8 8\'><path fill=\'#000\' d=\'M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z\'/></svg>');
 }
 
 .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before
@@ -20044,6 +20045,8 @@ a.btn-icon-only
 
 .form-control
 {
+    padding-right: 24px;
+    
     font-size: .875rem;
 
     height: calc(1.5em + 1.25rem + 5px); 

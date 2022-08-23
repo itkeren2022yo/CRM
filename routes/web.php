@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DepartmentController;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,15 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	 Route::get('table-list-client', function () {return view('pages.klienasesment');})->name('tableClientAsesment');
+	 Route::get('infopasar', function () {return view('pages.info_pasar_table');})->name('infopasar');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
+Route::get('/token', function () {
+	return csrf_token(); 
+});
+
+Route::post('/department/insert', [DepartmentController::class, 'store']);
+Route::get('/department/show', [DepartmentController::class, 'show']);
+Route::post('/department/delete/{id}', [DepartmentController::class, 'destroy']);
+Route::post('/department/update', [DepartmentController::class, 'update']);
