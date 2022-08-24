@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "liana": "laravel-forestadmin",
+        "liana_version": "1.1.2",
+        "stack": {
+            "database_type": "postgres",
+            "orm_version": "9.25.1"
+        }
+    },
+    "collections": [
+        {
+            "name": "user",
+            "class": "App\\Models\\User",
+            "old_name": "user",
+            "icon": null,
+            "is_read_only": false,
+            "is_virtual": false,
+            "is_searchable": true,
+            "only_for_relationships": false,
+            "pagination_type": "page",
+            "fields": [],
+            "segments": [],
+            "actions": []
+        }
+    ]
+}

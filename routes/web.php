@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\WorkSubsectionController;
+use App\Http\Controllers\FundingSourceController;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +46,13 @@ Route::post('/department/insert', [DepartmentController::class, 'store']);
 Route::get('/department/show', [DepartmentController::class, 'show']);
 Route::post('/department/delete/{id}', [DepartmentController::class, 'destroy']);
 Route::post('/department/update', [DepartmentController::class, 'update']);
+
+Route::post('/WorkSubsection/insert', [WorkSubsectionController::class, 'store']);
+Route::get('/WorkSubsection/show', [WorkSubsectionController::class, 'show']);
+Route::post('/WorkSubsection/delete/{id}', [WorkSubsectionController::class, 'destroy']);
+Route::post('/WorkSubsection/update', [WorkSubsectionController::class, 'update']);
+
+Route::post('/FundingSource/insert', [FundingSourceController::class, 'store']);
+Route::get('/FundingSource/show', [FundingSourceController::class, 'show']);
+Route::post('/FundingSource/delete/{id}', [FundingSourceController::class, 'destroy']);
+Route::post('/FundingSource/update', [FundingSourceController::class, 'update']);
