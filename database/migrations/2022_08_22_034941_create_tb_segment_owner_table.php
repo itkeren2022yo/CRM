@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_segment_owner', function (Blueprint $table) {
             $table->increments('id_segment_owner');
             $table->string('segment_name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_department', function (Blueprint $table) {
             $table->increments('id_department');
             $table->string('department_name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

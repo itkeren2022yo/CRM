@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('name_input');
             $table->string('email_input');
             $table->string('phone_input');
+            $table->softDeletes();
             $table->timestamps();
         });
 

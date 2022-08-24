@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('option');
             $table->text('description');
             $table->integer('status');
+            $table->softDeletes();
             $table->timestamps();
         });
 
