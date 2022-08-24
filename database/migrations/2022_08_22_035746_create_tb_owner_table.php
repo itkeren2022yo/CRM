@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('name_cp');
             $table->string('position_cp');
             $table->string('phone_number_cp');
+            $table->softDeletes();
             $table->timestamps();
         });
 

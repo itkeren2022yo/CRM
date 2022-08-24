@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Department;
+use App\Models\Departments;
 use Illuminate\Support\Facades\Validator;
 use DB;
 
@@ -140,7 +140,8 @@ class DepartmentController extends Controller
     public function destroy($id)
     {
       //
-        $delete_department = DB::table('tb_department')->where('id_department','=',$id)->delete();
+        $delete_var = Departments::find($id);
+        $delete_department = $delete_var->delete();
         if($delete_department){
             return response()->json([
                 'success' => true,
