@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('id_scope_needed')->unsigned();
             $table->integer('option');
             $table->text('scope_work');
+            $table->softDeletes();
             $table->timestamps();
         });
 

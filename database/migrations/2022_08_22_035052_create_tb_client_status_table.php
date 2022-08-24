@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_client_status', function (Blueprint $table) {
             $table->increments('id_client_status');
             $table->string('status_name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_scope_needed', function (Blueprint $table) {
             $table->increments('id_scope_needed');
             $table->string('name_scope_needed');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

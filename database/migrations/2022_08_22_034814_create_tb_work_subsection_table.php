@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_work_subsection', function (Blueprint $table) {
             $table->increments('id_work_subsection');
             $table->string('work_name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_funding_source', function (Blueprint $table) {
             $table->increments('id_funding_source');
             $table->string('funding_name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

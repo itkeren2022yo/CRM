@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_capability_question', function (Blueprint $table) {
             $table->increments('id_capability_question');
             $table->string('name_question');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
